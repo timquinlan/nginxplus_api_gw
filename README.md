@@ -17,15 +17,16 @@ Clone this repo and use docker-compose to bring up the environment:
 
 Container layout:
 
-                       clients ----> loadbalancer
-                                           |
-                                 --------------------
-                                |                    |
-                             apigw1 <------------> apigw2
-                                |                    |
-                                |                    |----------------> staging_apigw
-                                 ----------|---------                         |
-                                           |                                  |
-                                 |---------|--------|                    |----------|     
-                                 |         |        |                 stage1     stage2
-                               app1      app2     app3
+        clients ----> loadbalancer
+                            |
+                  --------------------
+                 |                    |
+              apigw1 <------------> apigw2
+                 |                    |
+                  ----------|---------                         
+                            |
+                            |-------------------> staging_apigw
+                            |                            |
+                   ---------|--------                ----------     
+                  |         |        |              |          |
+                app1      app2     app3          stage1     stage2
