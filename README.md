@@ -11,6 +11,7 @@ In addition to the key/cert you will need:
 Clone this repo and use docker-compose to bring up the environment:
 
     git clone https://www.github.com/timquinlan/nginxplus_api_gw
+    cp nginx-repo.crt nginx-repo.key nginxplus_api_gw/plus-build
     cd nginxplus_api_gw
     docker-compose up
 
