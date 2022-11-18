@@ -1,0 +1,2 @@
+#deb https://pkgs.nginx.com/plus/ubuntu kinetic nginx-plus
+deb https://pkgs.nginx.com/plus/ubuntu jammy nginx-plus

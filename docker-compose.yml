@@ -1,0 +1,64 @@
+version: '3.3'
+services:
+  # NGINX OSS LB
+  loadbalancer:
+      hostname: loadbalancer
+      build: plus-build
+      volumes:
+          - ./loadbalancer/etc/nginx:/etc/nginx
+      ports:
+        - 8080:80
+
+  # NGINX PLUS APIGW
+  apigw1:
+      hostname: apigw1
+      build: plus-build
+      volumes:
+          - ./apigw/etc/nginx:/etc/nginx
+      expose:
+        - "80"
+
+  # NGINX PLUS APIGW
+  apigw2:
+      hostname: apigw2
+      build: plus-build
+      volumes:
+          - ./apigw/etc/nginx:/etc/nginx
+      expose:
+        - "80"
+  
+  # NGINX PLUS APIGW
+  staging_apigw:
+      hostname: staging_apigw
+      build: plus-build
+      volumes:
+          - ./staging_apigw/etc/nginx:/etc/nginx
+      expose:
+        - "80"
+
+  # NGINX OSS upstreams
+  app1:
+      hostname: app1
+      build: upstream
+      expose:
+        - "80"
+  app2:
+      hostname: app2
+      build: upstream
+      expose:
+        - "80" 
+  app3:
+      hostname: app3
+      build: upstream
+      expose:
+        - "80" 
+  stage1:
+      hostname: stage1
+      build: upstream
+      expose:
+        - "80" 
+  stage2:
+      hostname: stage2
+      build: upstream
+      expose:
+        - "80" 
