@@ -1,6 +1,6 @@
 FROM ubuntu:jammy
 RUN apt-get update
-RUN apt-get install vim wget apt-transport-https lsb-release ca-certificates gnupg -y
+RUN apt-get install wget apt-transport-https lsb-release ca-certificates gnupg -y
 
 RUN mkdir -p /etc/ssl/nginx
 COPY nginx-repo.crt /etc/ssl/nginx/
