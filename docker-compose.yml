@@ -14,7 +14,7 @@ services:
       hostname: apigw1
       build: plus-build
       volumes:
-          - ./apigw/etc/nginx:/etc/nginx
+          - ./apigw1/etc/nginx:/etc/nginx
       expose:
         - "80"
 
@@ -23,7 +23,7 @@ services:
       hostname: apigw2
       build: plus-build
       volumes:
-          - ./apigw/etc/nginx:/etc/nginx
+          - ./apigw2/etc/nginx:/etc/nginx
       expose:
         - "80"
   
