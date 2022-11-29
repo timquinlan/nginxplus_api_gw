@@ -1,7 +1,7 @@
 FROM debian:latest
 
 RUN apt-get update
-RUN apt-get install wget curl jq apt-transport-https lsb-release ca-certificates gnupg2 -y
+RUN apt-get install less wget curl jq apt-transport-https lsb-release ca-certificates gnupg2 -y
 RUN wget -q -O /var/tmp/nginx_signing.key https://cs.nginx.com/static/keys/nginx_signing.key
 RUN apt-key add /var/tmp/nginx_signing.key
 RUN wget https://cs.nginx.com/static/keys/app-protect-security-updates.key

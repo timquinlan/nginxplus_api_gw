@@ -6,7 +6,7 @@ In addition to the key/cert you will need:
 * docker, docker-compose
 * authorization to build containers
 * authorization to forward host ports
-* port 8080 open on the host (if you need to use a different port, change docker-compose.yml line 37 before you run "docker-compose up")
+* port 8081 open on the host (if you need to use a different port, change docker-compose.yml line 37 before you run "docker-compose up")
 
 Clone this repo and use docker-compose to bring up the environment:
 
